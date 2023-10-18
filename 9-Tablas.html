@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tablas</title>
+
+    <!-- 
+    no se usa estilos en html, esto es solo para ejemplo
+    -->
+    <style>
+        /* col:nth-child(1){
+            background-color: lightcoral;
+        }
+        col:nth-child(2){
+            background-color: steelblue;
+        } */
+
+        table{
+            font-family: sans-serif;
+            border: 2px solid gray;
+            border-collapse:collapse;
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        caption{
+            font-size: 2rem;
+            font-weight: bold;
+            margin-top: 1rem;
+        }
+
+        th,
+        td {
+            background-color: rgb(255, 210, 195);
+            border: 2px solid gray;
+            padding: .5rem;
+        }
+
+        tr:nth-child(4) td:nth-child(2) {
+            background-color: lightgreen;
+            letter-spacing: 90px;
+            padding-left: 50px;
+            text-transform: uppercase;
+        }
+
+        td:first-child,
+        th,
+        tfoot {
+            background-color: lightgreen;
+        }
+
+    </style>
+</head>
+
+    <!-- 
+        Las tablas en html sirven para mostrar contenido tabulado
+
+        La estructura basica de una tabla se compone de 
+            table -> Etiqueta que encierra una tabla
+            tr-> table row, etiqueta que construye una fila
+            td-> table data, etiqueta que construye una celda
+
+        truco>: el numero de celdas dentro de un td establecera el numero de columnas de la tabla.
+
+        Los titulos de las tablas se establecen con la etiqueta caption, es una eiqueta opcional, y segun la especificacion esa etiqueta se coloca justo despues de la etiqueta table
+
+        Las cabeceras de las tablas se establecen con la etiqueta thead.
+        Dentro tendremos una etiqueta tr normal. pero en el caso de las celdas, las estableceremos con la etiqueta th en lugar de td
+
+        El contenido de la tabla debe ir dentro de una etiqueta tbody para representar el cuerpo de la tabla
+
+        De forma opcional podemos colocar un tfoot a la tabla para establecer un pie de tabla, esto es algo que algunas tablas tienen como suma cantidades o total.
+
+        Para hacer que las celdas ocupen mas de una fila o mas de una columna tenemos 2 atributos:
+            rowspan: sirve para que una celda ocupe mas de una fila, el valor por defecto es 1
+            colspan: sirve para que una celda ocupe mas de una columna, el valor por defecto es 1.
+        
+        Cuando necesitamos seleccionar una columnna, tenemos la etiqueta colgruop, que nos permite seleccionar una columna en concreto. Dentro pondremos tantas etiquetas col como columnas tengamos, cada etiqueta col equivaldra a una columna siguiendo el mismo orden que tienen en la tabla
+
+        Si necesitamos que una etiqueta col agrupa mas de una columna, tenemos el atributo span, que funciona exactamente igual que rowspan y colspan.
+         -->
+
+<body>
+    <h1>Tablas</h1>
+
+    <table>
+        <caption>HORARIO DE CLASES</caption>
+        <colgroup>
+            <col span="5">
+            <col>
+        </colgroup>
+        <thead>
+            <tr>
+                <th></th>
+                <th>L</th>
+                <th>M</th>
+                <th>X</th>
+                <th>J</th>
+                <th>V</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>8:30 - 9:30</td>
+                <td>Matemáticas</td>
+                <td>Matemáticas</td>
+                <td>Sociales</td>
+                <td>Matemáticas</td>
+                <td>Matemáticas</td>
+            </tr>
+            <tr>
+                <td>9:30 - 10:25</td>
+                <td>Lengua</td>
+                <td>Lengua</td>
+                <td>Matemáticas</td>
+                <td>Ciencias</td>
+                <td>Lengua</td>
+            </tr>
+            <tr>
+                <td>10:25 - 11:20</td>
+                <td>Educación Física</td>
+                <td>Ciencias</td>
+                <td>Lengua</td>
+                <td>Lengua</td>
+                <td>Educación Física</td>
+            </tr>
+            <tr>
+                <td>11:20 - 11:45</td>
+                <td colspan="5" >Recreo</td>
+            </tr>
+            <tr>
+                <td>11:45 - 12:40</td>
+                <td>Inglés</td>
+                <td>Sociales</td>
+                <td>Inglés</td>
+                <td>Tutoria</td>
+                <td>Inglés</td>
+            </tr>
+            <tr>
+                <td>12:40 - 13:35</td>
+                <td rowspan="2">Tecnologia</td>
+                <td>Educación Física</td>
+                <td>Plástica</td>
+                <td>Religión</td>
+                <td rowspan="2">Tecnologia</td>
+            </tr>
+            <tr>
+                <td>13:35 - 14:30</td>
+                <td>Francés</td>
+                <td>Tecnologia</td>
+                <td>Francés</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="5">Total de asignaturas</td>
+                <td>12</td>
+            </tr>
+        </tfoot>
+    </table>
+</body>
+</html>
