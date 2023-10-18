@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Enlaces</title>
+</head>
+<body>
+    <!-- 
+        Enlaces: Conocidos tambien comolinks popularmente, su objetivo es conectar una página web con otra página web, con un recurso tanto interno como externo, o con otro sitio web
+
+        Tienen el atr obligatorio href, donde le especificamos la ruta del recurso o sitio que queremos obtener´
+
+        Tambien tiene el atr target, que configura cómo queremos visualisar el recurso o sitio que solicitemos
+
+        Rutas absolutas: 
+            tienen protocolo, http o https y son unicas en la red, se suelen utilizar para rutas externas
+
+        Rutas relativas: 
+            Pueden ser relativas al punto donde nos encontramos o relativas a la raiz del proyecto. No usan protocolo.
+
+            si el recurso se encuentra al mismo nivel (en la misma carpeta) pondremos unicamente el nombre del archivo.
+
+            Si necesitamos salir de la carpeta usamos ../ y se pone uno por cada nivel(carpeta) de la que queramos salir.
+
+            https://www.google.com
+    
+    Atributos de los enlaces:
+        target: define donde se abrira el recurso solicitado. Por norma general siempre que useis rutas absolutas pondreis como valor "_blank", "_self"(es por defecto)
+
+        download: Atributo booleano, sirve para descargar el recurso solicitado.
+        Importante, el recurso debe estar en tu mismo servidor
+     -->
+</body>
+    <h1>HOME</h1>
+    <a href="otra-cap/contacto.html">Ir a contacto</a>
+    <a href="otra-cap/blog.html"><br> Ir al blog</a>
+
+    <nav>
+        <p><a href="/7-Enlaces_web-demo/otra-cap/blog.html#post-1">Ir a Post 1</a></p>
+        <p><a href="/7-Enlaces_web-demo/otra-cap/blog.html#post-2">Ir a Post 2</a></p>
+        <p><a href="/7-Enlaces_web-demo/otra-cap/blog.html#post-3">Ir a Post 3</a></p>
+    </nav>
+
+    <a href="https://www.google.com" target="_blank"><br> Ir a google</a>
+    <a href="https://www.youtube.com" target="_blank"><br> Ir a youtube</a>
+
+    <a href="assets/images/Baal, Kokomi, Ayaka, Miko.jpg" download><br> Descargar imagen de ei chikita llorando</a>
+</html>
