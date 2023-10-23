@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Otras etiqueta de bloque</title>
+</head>
+<!-- 
+    address -> Se utiliza para aportar informacion de contacto para el article mas cercano o para todo el body
+
+    blockquote -> Se utiliza para marcar las citas a otros autores o documentos. Se puede incluir el atributo vite para poner un enlace al documento original o fuente
+
+    pre-> Se utiliza para tener codigo preformateado que necesita ser representado igual que se escribio
+
+    div-> Se usa como division del documento, semanticamente no significa nada. es un contenedor generico que se usa generalmente para dar estilos a traves de css o para usar algo denominado "delegacion de eventos" en javascript
+
+    hr -> horizontal rule, se utiliza para decirle al navegador que vamos a cambiar de tema
+
+
+ -->
+<body>
+    
+    <address> 
+        <!-- En este caso pòner un br es correcto para mostrar una dirreción -->
+        Tony Stark <br>
+        Malibu 10880 <br>
+        90265 <br>
+        California
+    </address>
+
+    
+    <blockquote cite="https://es.wikipedia.org/wiki/Wikipedia:Portada">
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Atque debitis voluptas, dolorum explicabo error quas doloremque veniam hic. Aliquid optio minus corrupti? Id officia corporis, voluptas impedit maiores eligendi fugiat?</p>
+    </blockquote>
+
+    <!-- Basicamente se utiliza para codigo -->
+    <pre>
+             Hola,
+        que tal?
+    </pre>
+
+    <!-- Se usa para dividir contenido, y para dar estilos a traves de css o para delegación de eventos de JS -->
+    <div>
+        <h2>Nombre</h2>
+        <p>Email</p>
+        <p>Descripción</p>
+    </div>
+
+    <!-- no sirve para dibujar lineas -->
+    <hr>
+
+    <div>
+        <h2>Nombre</h2>
+        <p>Email</p>
+        <p>Descripción</p>
+    </div>
+</body>
+</html>
