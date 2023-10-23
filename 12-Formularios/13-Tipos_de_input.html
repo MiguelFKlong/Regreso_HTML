@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input</title>
+</head>
+    <!-- 
+    input type
+        button -> Se comporta igual que un boton <button>
+        submit -> Se utiliza para enviar el formulario
+
+        date -> Se utiliza para introducir una fecha
+        datetime -> obsoleto
+        datetime-local -> fecha y hora, no funciona en firefox
+        time -> Se utiliza para introducir una hora
+            TIP
+                Se recomienda usar datetime-local y time para seleccionar una fecha y hora
+                hidden -> Campo oculto, puede contener valor pero no se mostrara
+        month -> Se utiliza para introducir mes
+        week -> Se utiliza para introducir el numero de semana del año
+        
+        search -> Se utiliza para las barras de busqueda
+        tel -> Se utiliza para introducir numeros telefonicos
+        email -> Se utiliza para introducir un email
+        password -> Se utiliza para contraseñas
+        url ->Se utiliza para introducit urls
+
+        color -> Se utiliza para especificar un color
+        text ->  Valor por defecto
+        number -> Se utiliza para valores numericos
+        range -> Se utiliza para establecer un rango
+        reset -> Se utiliza para resetear el formulario
+    
+    -->
+<body>
+    <form>
+        <input>
+        <!-- Un input type button no sirve para enviar formularios, pero si puede servir para que JS haga alguna acción -->
+        <input type="button" value="Enviar Input">
+        <!-- Un input type submit si sirve para enviar formularios -->
+        <input type="submit" value="Enviar Input 2">
+        <button>Enviar</button>
+    </form>
+
+    <form>
+        <!-- Es el mas común -->
+        <input type="date">
+        <!-- Ya esta obsoleto -->
+        <input type="datetime">
+        <!-- Para dar no solo la fecha tambien la hora, pero no funciona en firefox -->
+        <input type="datetime-local">
+        <!-- Si quisieramos usar tanto fecha como hora en todos los navegadores se puede hacer esto -->
+        <input type="date">
+        <input type="time">
+        <!-- Se utiliza para introducir un mes y año -->
+        <input type="month">
+        <!-- Se utiliza para introducir una semana -->
+        <input type="week">
+    </form>
+
+    <form>
+        <div>
+            <label>search
+                <input type="search">
+            </label>
+        </div>
+        <div>
+            <label>telefono
+                <input type="tel">
+            </label>
+        </div>
+        <div>
+            <label>email
+                <input type="email">
+            </label>
+        </div>
+        <div>
+            <label>password
+                <input type="password">
+            </label>
+        </div>
+        <div>
+            <label>url
+                <input type="url">
+            </label>
+        </div>
+    </form>
+
+    <form>
+        <div>
+            <input type="color">
+        </div>
+        <div>
+            <input type="number">
+        </div>
+        <div>
+            <input type="range" step="10" min="0" max="30">
+        </div>
+        <div>
+            <input type="reset">
+        </div>
+        <div>
+            <input type="text">
+            
+        </div>
+        <input type="text">
+    </form>
+</body>
+</html>
